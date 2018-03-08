@@ -16,14 +16,28 @@
 
 package florianwiesner.gradle.magicdraw
 
+import org.gradle.api.GradleException
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.slf4j.LoggerFactory
+
+private val logger = LoggerFactory.getLogger(MagicDrawExtension::class.java)
 
 /**
  * @author Florian Wiesner
  */
-class MagicDrawGradlePlugin :Plugin<Project>{
-    override fun apply(target: Project?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+class MagicDrawGradlePlugin : Plugin<Project> {
+    private lateinit var project: Project
+
+    override fun apply(project: Project?) {
+        if (project == null) throw GradleException("project must not be null")
+        this.project = project
+        val extension = addExtension<MagicDrawExtension>("magicdraw", "Foo")
+
+        val verifyMagicDrawTask = project.tasks.create("verifyMagicDraw", VerifyMagicDrawTask::class.java)
+        verifyMagicDrawTask.installDir = extension.installDir
     }
+
+    private inline fun <reified T> addExtension(name: String, vararg args: Any): T = project.extensions.create(name, T::class.java, *args)
+
 }

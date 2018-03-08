@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/magicdraw-gradle-plugin.iml" filepath="$PROJECT_DIR$/magicdraw-gradle-plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/magicdraw-gradle-plugin_main.iml" filepath="$PROJECT_DIR$/.idea/modules/magicdraw-gradle-plugin_main.iml" group="magicdraw-gradle-plugin" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/magicdraw-gradle-plugin_test.iml" filepath="$PROJECT_DIR$/.idea/modules/magicdraw-gradle-plugin_test.iml" group="magicdraw-gradle-plugin" />
     </modules>
   </component>
 </project>

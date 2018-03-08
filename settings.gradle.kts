@@ -13,12 +13,3 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-val myGradleVersion = "4.6"
-
-tasks {
-    getByName("wrapper") {
-        this as Wrapper
-        this.gradleVersion = myGradleVersion
-    }
-}

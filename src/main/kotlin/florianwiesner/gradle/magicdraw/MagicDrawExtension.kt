@@ -14,11 +14,13 @@
  * limitations under the License.
  */
 
-val myGradleVersion = "4.6"
+package florianwiesner.gradle.magicdraw
 
-tasks {
-    getByName("wrapper") {
-        this as Wrapper
-        this.gradleVersion = myGradleVersion
-    }
+import javax.inject.Inject
+
+/**
+ * @author Florian Wiesner
+ */
+open class MagicDrawExtension @Inject constructor(var installDir: String) {
+
 }

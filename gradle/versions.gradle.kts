@@ -14,5 +14,8 @@
  * limitations under the License.
  */
 
-extra["gradleVersion"] = "4.5.1"
+extra["gradleVersion"] = "4.6"
 extra["kotlinVersion"] = "1.2.30"
+extra["spekVersion"] = "1.1.5"
+extra["kluentVersion"] = "1.35"
+extra["mockitoKotlinVersion"] = "1.5.0"

@@ -14,11 +14,20 @@
  * limitations under the License.
  */
 
-val myGradleVersion = "4.6"
+package florianwiesner.gradle.magicdraw
 
-tasks {
-    getByName("wrapper") {
-        this as Wrapper
-        this.gradleVersion = myGradleVersion
+import org.gradle.api.DefaultTask
+import org.gradle.api.tasks.TaskAction
+
+/**
+ * @author Florian Wiesner
+ */
+open class VerifyMagicDrawTask : DefaultTask() {
+    lateinit var installDir: String
+
+    @TaskAction
+    open fun verifySetup() {
+        println("InstallDir: $installDir")
+        logger.info("All good")
     }
 }
